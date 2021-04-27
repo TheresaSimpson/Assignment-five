@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 mongoose
   .connect("mongodb://localhost:27017/school", {
     useCreateIndex: true,
-    useFindAndModify: true,
+    useFindAndModify: false,
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

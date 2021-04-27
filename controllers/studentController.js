@@ -1,31 +1,31 @@
-const Student = require("../models/Student");
+import Student from "../models/Student";
 
-const allStudents = async(req,res) =>{
-   const students = await Student.find();
-   res.status(200).json({students});
+export const allStudents = async (req, res) => {
+  const students = await Student.find();
+  res.status(200).json({ students });
 };
 
-const getStudent = async(req,res) => {
-   res.send('Get a student');
+export const getStudent = async (req, res) => {
+  const id = req.params.id;
+  const students = await Student.findById();
+  res.status(200).json({ students });
 };
 
-const createStudent = async(req,res) =>{
-    res.send('Create Student');
+export const createStudent = async (req, res) => {
+  const { name, programme, indexNumber } = req.body;
+
+  const student = await Student.create({ name, programme, indexNumber });
+  res.status(201).json({ student });
 };
 
-const updateStudent = async(req,res) =>{
-    res.send('Update Student');
+export const updateStudent = async (req, res) => {
+  const id = req.params.id;
+  const students = await Student.findById();
+  res.status(200).json({ students });
 };
 
-const deleteStudent =async (req,res) =>{
-    res.send('Delete Stutent');
+export const deleteStudent = async (req, res) => {
+  const id = req.params.id;
+  const students = await Student.findById();
+  res.status(200).json({ students });
 };
-
-module.exports = {
-    allStudents,
-    getStudent,
-    createStudent,
-    updateStudent,
-    deleteStudent,
-}
-

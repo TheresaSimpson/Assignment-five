@@ -1,16 +1,27 @@
 {
   "name": "school",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon -r esm server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "esm": "^3.2.25",
     "express": "^4.17.1",
     "mongoose": "^5.12.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheresaSimpson/Assignment-five.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TheresaSimpson/Assignment-five/issues"
+  },
+  "homepage": "https://github.com/TheresaSimpson/Assignment-five#readme",
+  "description": ""
 }
